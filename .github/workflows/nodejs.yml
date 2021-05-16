@@ -28,7 +28,9 @@ jobs:
       - name: 'Setup Node.js environment'
         uses: actions/setup-node@v2.1.5
       - name: 'npm install'
-        run: npm install
+        run: npm install axios
+      - name: 'install cheerio'
+        run: npm install cheerio
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: node index.js ${{ secrets.PARA_URL }}
