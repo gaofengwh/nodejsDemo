@@ -27,8 +27,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: 'Setup Node.js environment'
         uses: actions/setup-node@v2.1.5
-        # with:
-        #   PARA_URL: ${{ secrets.PARA_URL }} 
+      - name: 'npm install'
+        run: npm install
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: node index.js ${{ secrets.PARA_URL }}
