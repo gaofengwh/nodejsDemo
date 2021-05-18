@@ -7,6 +7,9 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
+  schedule:
+  # 不知道这个时间是否和中国时间一样都是早上七点
+    - cron: '40 6 * * *'
   #pull_request:
    # branches: [ main ]
 
