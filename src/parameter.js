@@ -2,7 +2,7 @@ const axios = require('axios')
 
 // 获取消息内容
 let response = async function (){
-    console.log('1',this.url)
+    // console.log('1',this.url)
     let obj =await new Promise((resolve,reject)=>{
         axios.get(this.url).then(res=>{resolve(res.data);});
     });
@@ -30,7 +30,7 @@ let atoken = async function(){
 }
 // 发送微信文本通知
 let sedMsg = async function(txt){
-    console.log('txt',txt);
+    // console.log('txt',txt);
     if(this.wtoken.length==0){
         await atoken().then(tk=>{this.token=tk}).catch(err=>{console.log('err01',err)});
     }
@@ -57,7 +57,6 @@ let para = {
     wtoken:new String,
     sedMsg:sedMsg,
 };
-
 
 module.exports = para
 // module.exports = async (args)=>{
