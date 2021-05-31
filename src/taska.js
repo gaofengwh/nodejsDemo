@@ -37,7 +37,7 @@ var TaskaRun = async function(){
                 console.log('tk12');
             });
         }
-        console.log(td,te);
+        console.log(td==te,td,te);
          return ;
     })
     // para.res().then((data)=>{
