@@ -24,7 +24,8 @@ var TaskaRun = async function () {
         var year = da.getFullYear() + '年';
         var month = da.getMonth() + 1;
         month = (month < 10) ? ('0' + month + '月') : (month + '月');
-        var date = da.getDate() + '日';
+        var day = da.getDate() + '日';
+        var date = (day < 10) ? ('0' + day + '日') : (day + '日');
         let te = year + month + date
         if (td == te) {
             // [style='color: #ff0000'] "p>span" "p>span[style]"
