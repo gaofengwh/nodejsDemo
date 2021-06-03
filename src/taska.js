@@ -24,7 +24,7 @@ var TaskaRun = async function () {
         var year = da.getFullYear() + '年';
         var month = da.getMonth() + 1;
         month = (month < 10) ? ('0' + month + '月') : (month + '月');
-        var day = da.getDate() + '日';
+        var day = da.getDate();
         var date = (day < 10) ? ('0' + day + '日') : (day + '日');
         let te = year + month + date
         if (td == te) {
