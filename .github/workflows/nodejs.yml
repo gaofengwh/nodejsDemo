@@ -2,15 +2,15 @@
 
 name: CI-Nodejs
 
-# Controls when the action will run. 
+# 触发条件，什么条件开始，并列表示多个触发条件
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # 推送代码到主分支上触发
   push:
     branches: [ main ]
   schedule:
-  # 不知道这个时间是否和中国时间一样都是早上七点
+  # 东八区正确设置时间 (x-8)>0?(x-8):(x-8+24)
     - cron: '40 21 * * *'
-  #pull_request:
+  #pull_request:  # 从主分支上拉取时触发
    # branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -19,18 +19,23 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
+  # 这个工作流包含一个单独的工作叫作“构建”
   build:
     # The type of runner that the job will run on
+    # 这个运行者所需的环境时最新的ubunt系统
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: 'Checkout codes'
+      # 拷贝器，从GitHub上拷贝仓库代码
         uses: actions/checkout@v2
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: 'Setup Node.js environment'
+      # 设置运行环境 这里是node
         uses: actions/setup-node@v2.1.5
         with:
+        # 指定环境的版本
           node-version: '14.x'
       - name: 'install axios'
         run: npm install axios

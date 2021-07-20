@@ -14,7 +14,8 @@ var TaskaRun = async function () {
             });
         } return;
     })
-
+    return;
+    // 任务无效，不需要继续执行
     let url2 = "https://www.abcxx.net/usid/365.html"
     axios.get(url2).then(res => {
         let $ = cheerio.load(res.data);
