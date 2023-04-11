@@ -12,4 +12,6 @@ window 编译ts的快捷键是ctrl+shift+B，编译的好处是可以检验语�
 [5-24进度](https://www.bilibili.com/video/BV127411k7yC?p=11&spm_id_from=pageDriver)
 [视频进度](https://www.bilibili.com/video/BV127411k7yC?p=6)
 
+## node.js网络爬虫
+> 目标，三遍
 
